@@ -1,3 +1,9 @@
+import os
+from setuptools import setup, find_packages
+# باقي الكود كيفما هو...
+
+
+
 from setuptools import setup, find_packages
 
 setup(

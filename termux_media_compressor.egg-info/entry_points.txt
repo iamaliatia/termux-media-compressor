@@ -1,0 +1,2 @@
+[console_scripts]
+termux-compress = termux_compressor.compressor:main

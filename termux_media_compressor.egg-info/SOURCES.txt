@@ -1,0 +1,9 @@
+setup.py
+termux_compressor/__init__.py
+termux_compressor/compressor.py
+termux_media_compressor.egg-info/PKG-INFO
+termux_media_compressor.egg-info/SOURCES.txt
+termux_media_compressor.egg-info/dependency_links.txt
+termux_media_compressor.egg-info/entry_points.txt
+termux_media_compressor.egg-info/requires.txt
+termux_media_compressor.egg-info/top_level.txt

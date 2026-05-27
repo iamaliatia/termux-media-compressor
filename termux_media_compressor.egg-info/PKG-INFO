@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: termux-media-compressor
+Version: 0.1.0
+Summary: A Python CLI tool to compress images and videos locally inside Termux
+Author: Ali Atia
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Android
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow>=10.0.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
