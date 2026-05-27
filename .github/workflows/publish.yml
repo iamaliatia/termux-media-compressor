@@ -1,20 +1,26 @@
 name: Publish to PyPI
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      id-token: write    # 👈 هادي هي الصلاحية اللي كتخلي PyPI يثق ف GitHub ديريكت
       contents: read
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
+
     - name: Install Flit
       run: pip install flit
+
     - name: Publish with Flit
       run: flit publish
