@@ -1,22 +1,26 @@
 name: Publish to PyPI
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.10"
-    - name: Install Twine and Build
-      run: pip install build twine
-    - name: Build and Publish
+        python-version: "3.11"
+
+    - name: Install Flit
+      run: pip install flit
+
+    - name: Publish with Flit
       env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-      run: |
-        python -m build
-        twine upload dist/*
+        FLIT_USERNAME: __token__
+        FLIT_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: flit publish
